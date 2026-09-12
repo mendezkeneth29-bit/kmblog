@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>entrada — keneth.txt</title>
+<link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="crt-vignette" aria-hidden="true"></div>
+<div id="progress" aria-hidden="true"></div>
+<div class="page">
+  <figure class="banner">
+    <img src="https://i.pinimg.com/736x/f8/79/d2/f879d28c3b4b30cb08c4e0cb191baa23.jpg" alt="banner del blog" loading="eager">
+  </figure>
+  <div class="topbar">
+    <span class="dots"><i></i><i></i><i></i></span>
+    <span class="topbar-title">C:\blog\post.exe</span>
+    <span class="topbar-right"><a href="index.html">← inicio</a> · <a href="posts.html">posts</a> · <a href="archive.html">archivo</a> · <a href="gallery.html">galería</a></span>
+  </div>
+  <div class="player-row"><div id="music-player"></div></div>
+  <main class="content wide">
+    <article class="box post-full">
+      <div class="box-head"><span id="post-kicker">✎ entrada</span><span><a href="archive.html">← todas</a></span></div>
+      <div class="box-body" id="post-body">
+        <noscript><p>Activa JavaScript para leer la entrada.</p></noscript>
+      </div>
+    </article>
+    <p class="center"><a class="btn small" href="archive.html">← volver al archivo</a> <a class="btn small" href="index.html">firmar libro de visitas</a></p>
+  </main>
+  <footer class="footer">
+    <hr class="hr-double">
+    <p>© 2026 keneth · guatemala · <a href="index.html">inicio</a></p>
+  </footer>
+</div>
+<script type="application/json" id="posts-data">
+[
+  {
+    "slug": "mis-gustos-musica-libros",
+    "title": "Lo que me gusta (música y libros)",
+    "date": "2026-09-03",
+    "tags": ["gustos", "música", "libros"],
+    "excerpt": "Indie, pop y jazz. Harry Potter, Stephen King y Stranger Things. Mi lista corta.",
+    "html": "<p>Pequeño registro de lo que escucho y leo:</p><ul><li><strong>Música:</strong> indie, pop y jazz.</li><li><strong>Libros:</strong> Harry Potter, Stephen King y también los de Stranger Things.</li></ul><p>Idea para más adelante: escribir reseñas de cada libro aquí en el blog.</p>"
+  },
+  {
+    "slug": "hola-mundo-lento",
+    "title": "Hola, soy Keneth",
+    "date": "2026-09-01",
+    "tags": ["diario", "blog"],
+    "excerpt": "Arranco mi blog personal desde Guatemala, hecho a mano con HTML, CSS, JS y JSON.",
+    "html": "<p>Hola, soy <strong>Keneth</strong> y vivo en <strong>Guatemala</strong>. Este es mi blog personal, hecho a mano.</p><p>Lo construyo solo con HTML, CSS, JS y JSON: sin frameworks y sin rastreadores.</p><p>Aquí voy a publicar lo que aprendo y lo que pienso. Sin prisa.</p>"
+  },
+  {
+    "slug": "mi-pagina-solo-html-css-js",
+    "title": "Mi página solo con HTML, CSS y JS",
+    "date": "2026-08-20",
+    "tags": ["código", "web"],
+    "excerpt": "Cómo está armado este blog: HTML + CSS + JS + un JSON, nada más.",
+    "html": "<p>Este blog no usa frameworks ni Python. Solo:</p><ul><li><strong>HTML</strong> para la estructura.</li><li><strong>CSS</strong> para el tema negro + azul.</li><li><strong>JS</strong> para cargar los posts y el libro de visitas.</li><li><strong>JSON</strong> en <code>data/posts.json</code> para las entradas.</li></ul><p>Simple, rápido y mío.</p>"
+  },
+  {
+    "slug": "notas-desde-guatemala",
+    "title": "Notas desde Guatemala",
+    "date": "2026-08-02",
+    "tags": ["diario", "guatemala"],
+    "excerpt": "Café, código y planes para este rincón en internet.",
+    "html": "<p>Escribo desde <strong>Guatemala (GMT-6)</strong>, con café de aquí al lado.</p><p>En este blog quiero llevar un registro simple: lo que aprendo de web, lo que leo y lo que voy construyendo.</p><p>Si pasas por aquí, déjame una firma en el libro de visitas. ↓</p>"
+  }
+]
+</script>
+<script type="application/json" id="tracks-data">
+{
+  "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXEwgENB7cR-7jaSImL9CpbW9uYrdXlm6dIdx_mRwVzczv-Me-aDkt8iU",
+  "tracks": [
+    { "name": "Love is in the Air, Pt. 1", "file": "mp3/Love is in the Air, Pt. 1.mp3" },
+    { "name": "Purpose Is Glorious (Emotional Score)", "file": "mp3/Purpose Is Glorious (Emotional Score).mp3" },
+    { "name": "Runaway", "file": "mp3/Runaway.mp3" },
+    { "name": "Softcore", "file": "mp3/Softcore.mp3" }
+  ]
+}
+</script>
+<script src="js/posts.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/player.js"></script>
+</body>
+</html>
