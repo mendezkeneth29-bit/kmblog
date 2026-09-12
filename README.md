@@ -12,7 +12,7 @@ Guiños 2000s: marquesina, contador, libro de visitas, webring, botones 88×31 *
 
 ## modo admin secreto
 - Abrir: pulsa **Ctrl+Shift+A** en cualquier página, doble clic en los ● de la barra superior o el botón **[ admin ]** del menú.
-- Contraseña: **2026** (está en `js/admin.js`; no es seguridad real).
+- Contraseña: **???** (está en `js/admin.js`; no es seguridad real).
 - Pestañas: **▤ POSTS** (editor de entradas), **▩ LIBROS** (crear libros con color y páginas), **▦ GALERÍA** (subir fotos con título y texto), **✉ VISITAS** (libro de visitas), **✎ COMENTARIOS** (moderar comentarios) y **◍ AJUSTES** (color acento, contador, marquesina, efecto CRT). Los cambios se guardan en el navegador (`localStorage`).
 - "restaurar originales" vuelve a los posts de `data/posts.json`.
 
@@ -39,7 +39,7 @@ Abre `index.html` con doble clic en tu navegador y todo funciona: posts, libro d
 > Si algún día lo subes a internet, el blog también lee `data/posts.json` (el JSON incrustado es una copia para que funcione sin servidor).
 
 ## publicar una entrada
-La vía fácil: abre el **MODEM admin** (Ctrl+Shift+A → clave `2026`) y usa la pestaña ▤ POSTS con `＋ nuevo` y `▸ guardar`.
+La vía fácil: abre el **MODEM admin** (Ctrl+Shift+A → clave `???`) y usa la pestaña ▤ POSTS con `＋ nuevo` y `▸ guardar`.
 
 La vía manual: edita el bloque `<script type="application/json" id="posts-data">` que está en `index.html`, `archive.html` y `post.html`, añadiendo tu post en el mismo formato que los demás (parecido a esto):
 
