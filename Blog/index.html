@@ -1,0 +1,218 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>keneth.exe — blog personal</title>
+<meta name="description" content="Blog personal de Keneth desde Guatemala. Diario, código y vida lenta con estética 2000s.">
+<link rel="stylesheet" href="css/style.css">
+<link rel="icon" href="data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><text y='.9em' font-size='90'>✦</text></svg>">
+</head>
+<body>
+<div class="scanlines" aria-hidden="true"></div>
+<div class="crt-vignette" aria-hidden="true"></div>
+
+<div class="page">
+  <!-- ═══ BANNER superior ═══ -->
+  <figure class="banner">
+    <img src="https://i.pinimg.com/736x/f8/79/d2/f879d28c3b4b30cb08c4e0cb191baa23.jpg" alt="banner del blog" loading="eager">
+  </figure>
+  <!-- ═══ TOP BAR estilo ventana 2000s ═══ -->
+  <div class="topbar">
+    <span class="dots"><i></i><i></i><i></i></span>
+    <span class="topbar-title">C:\blog\keneth.exe — <span id="today">...</span></span>
+    <span class="topbar-right">guatemala · rev. 2026</span>
+  </div>
+
+  <!-- ═══ CABECERA ═══ -->
+  <header class="site-header">
+    <p class="kicker">｡･ﾟ✦ diario personal desde guatemala ✦ﾟ･｡</p>
+    <h1 class="logo"><a href="index.html">keneth<span class="logo-dim">.txt</span></a></h1>
+    <p class="tagline">escribo sobre <em>código, internet y vida lenta</em> — desde guatemala, sin prisa.</p>
+    <div class="nav-row">
+      <nav class="nav">
+        <a href="index.html" class="active">[ inicio ]</a>
+        <a href="posts.html">[ posts ]</a>
+        <a href="archive.html">[ archivo ]</a>
+        <a href="gallery.html">[ galería ]</a>
+        <a href="about.html">[ sobre mí ]</a>
+        <a href="https://www.instagram.com/tiki.tiki.uwu_67" target="_blank" rel="me">[ instagram ]</a>
+        <a href="#" id="nav-admin" title="panel admin">[ admin ]</a>
+      </nav>
+      <div id="music-player"></div>
+    </div>
+    <hr class="hr-dots">
+  </header>
+
+  <div class="layout">
+    <!-- ═══ CONTENIDO ═══ -->
+    <main class="content">
+      <section class="box welcome">
+        <div class="box-head"><span>✎ bienvenid@</span><span>0001</span></div>
+        <div class="box-body">
+          <p>Hola, soy <strong>Keneth Méndez</strong>, tengo 13 años y vivo en Guatemala. Este es mi rincón en internet: un blog pequeño, hecho a mano, sin algoritmos.</p>
+          <p class="muted">Aquí voy a escribir sobre lo que aprendo de código y web, y sobre lo que me gusta: indie, pop y jazz, Harry Potter, Stephen King y Stranger Things. Todo el sitio es HTML + CSS + JS + JSON, sin rastreadores.</p>
+          <p class="marquee-wrap"><span class="marquee">✦ gracias por visitar ✦ firma el libro de visitas ✦ vuelve pronto ✦&nbsp;</span></p>
+        </div>
+      </section>
+
+      <section class="box">
+        <div class="box-head"><span>▤ últimas entradas</span><span><a href="archive.html">ver todo →</a></span></div>
+        <div class="box-body" id="latest-posts">
+          <!-- JS inyecta los posts aquí -->
+          <noscript><p>Necesitas activar JavaScript para ver las entradas. Mientras tanto, visita el <a href="archive.html">archivo</a>.</p></noscript>
+        </div>
+      </section>
+
+      <section class="box">
+        <div class="box-head"><span>▤ biblioteca</span><span><a href="about.html">mis gustos →</a></span></div>
+        <div class="box-body">
+          <p class="small muted">haz clic en un libro para abrirlo y leerlo con animación de páginas</p>
+          <div id="library-row" class="library-row"></div>
+        </div>
+      </section>
+
+      <section class="box">
+        <div class="box-head"><span>✉ libro de visitas</span><span id="guest-count">0 firmas</span></div>
+        <div class="box-body">
+          <form id="guestbook-form" class="guest-form">
+            <div class="row">
+              <label>nombre<br><input type="text" id="guest-name" maxlength="30" placeholder="anónimo_2004" required></label>
+              <label>web (opcional)<br><input type="url" id="guest-web" placeholder="https://..."></label>
+            </div>
+            <label>mensaje<br><textarea id="guest-msg" rows="3" maxlength="300" placeholder="hola! pasé por aquí desde el webring..." required></textarea></label>
+            <button type="submit" class="btn">firmar ＋ enter</button>
+          </form>
+          <ul id="guestbook-list" class="guest-list"></ul>
+        </div>
+      </section>
+    </main>
+
+    <!-- ═══ LATERAL ═══ -->
+    <aside class="sidebar">
+      <section class="box">
+        <div class="box-head"><span>◉ sobre mí</span></div>
+        <div class="box-body center">
+          <div class="avatar">K</div>
+          <p><strong>Keneth Méndez</strong>, 13 años<br><span class="muted">guatemala / internet</span></p>
+          <p class="small">indie, pop y jazz · harry potter, stephen king y stranger things.</p>
+          <a class="btn small" href="about.html">leer más</a>
+        </div>
+      </section>
+
+      <section class="box">
+        <div class="box-head"><span>◍ ahora</span></div>
+        <div class="box-body small">
+          <p>◍ tomando: Agua<br>♪ escuchando: <span id="now-playing">indie, pop y jazz en shuffle</span><br>✎ escribiendo: mi blog a mano<br>◷ zona: GMT-6 (guatemala)</p>
+        </div>
+      </section>
+
+      <section class="box">
+        <div class="box-head"><span>◎ contador</span></div>
+        <div class="box-body center">
+          <div class="counter" id="visitor-counter">000000</div>
+          <p class="small muted">eres el visitante nº <span id="visitor-n">…</span><br>desde septiembre · 2026</p>
+        </div>
+      </section>
+
+      <section class="box">
+        <div class="box-head"><span>☍ links</span></div>
+        <div class="box-body small">
+          <ul class="links">
+            <li>→ <a href="https://www.instagram.com/tiki.tiki.uwu_67" target="_blank" rel="me">instagram @tiki.tiki.uwu_67</a></li>
+            <li>→ <a href="about.html">sobre mí</a></li>
+            <li>→ <a href="archive.html">archivo</a></li>
+            <li>→ <a href="mailto:mendezkeneth29@gmail.com">mendezkeneth29@gmail.com</a></li>
+          </ul>
+          <hr class="hr-dots">
+          <p class="center small">← <a href="#">anterior</a> · webring · <a href="#">siguiente</a> →</p>
+          <p class="center"><span class="btn88">hecho a mano<br>en html</span> <span class="btn88">800×600<br>friendly</span></p>
+        </div>
+      </section>
+    </aside>
+  </div>
+
+  <footer class="footer">
+    <hr class="hr-double">
+    <p>© 2026 keneth · guatemala · hecho a mano sin trackers · <a href="#">subir ↑</a></p>
+    <p class="muted small">hecho con html + css + js + json · 100% humano</p>
+  </footer>
+</div>
+
+<script type="application/json" id="posts-data">
+[
+  {
+    "slug": "mis-gustos-musica-libros",
+    "title": "Lo que me gusta (música y libros)",
+    "date": "2026-09-03",
+    "tags": ["gustos", "música", "libros"],
+    "excerpt": "Indie, pop y jazz. Harry Potter, Stephen King y Stranger Things. Mi lista corta.",
+    "html": "<p>Pequeño registro de lo que escucho y leo:</p><ul><li><strong>Música:</strong> indie, pop y jazz.</li><li><strong>Libros:</strong> Harry Potter, Stephen King y también los de Stranger Things.</li></ul><p>Idea para más adelante: escribir reseñas de cada libro aquí en el blog.</p>"
+  },
+  {
+    "slug": "hola-mundo-lento",
+    "title": "Hola, soy Keneth",
+    "date": "2026-09-01",
+    "tags": ["diario", "blog"],
+    "excerpt": "Arranco mi blog personal desde Guatemala, hecho a mano con HTML, CSS, JS y JSON.",
+    "html": "<p>Hola, soy <strong>Keneth</strong> y vivo en <strong>Guatemala</strong>. Este es mi blog personal, hecho a mano.</p><p>Lo construyo solo con HTML, CSS, JS y JSON: sin frameworks y sin rastreadores.</p><p>Aquí voy a publicar lo que aprendo y lo que pienso. Sin prisa.</p>"
+  },
+  {
+    "slug": "mi-pagina-solo-html-css-js",
+    "title": "Mi página solo con HTML, CSS y JS",
+    "date": "2026-08-20",
+    "tags": ["código", "web"],
+    "excerpt": "Cómo está armado este blog: HTML + CSS + JS + un JSON, nada más.",
+    "html": "<p>Este blog no usa frameworks ni Python. Solo:</p><ul><li><strong>HTML</strong> para la estructura.</li><li><strong>CSS</strong> para el tema negro + azul.</li><li><strong>JS</strong> para cargar los posts y el libro de visitas.</li><li><strong>JSON</strong> en <code>data/posts.json</code> para las entradas.</li></ul><p>Simple, rápido y mío.</p>"
+  },
+  {
+    "slug": "notas-desde-guatemala",
+    "title": "Notas desde Guatemala",
+    "date": "2026-08-02",
+    "tags": ["diario", "guatemala"],
+    "excerpt": "Café, código y planes para este rincón en internet.",
+    "html": "<p>Escribo desde <strong>Guatemala (GMT-6)</strong>, con café de aquí al lado.</p><p>En este blog quiero llevar un registro simple: lo que aprendo de web, lo que leo y lo que voy construyendo.</p><p>Si pasas por aquí, déjame una firma en el libro de visitas. ↓</p>"
+  }
+]
+</script>
+<script type="application/json" id="books-data">
+{
+  "books": []
+}
+</script>
+<script type="application/json" id="tracks-data">
+{
+  "cover": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSXEwgENB7cR-7jaSImL9CpbW9uYrdXlm6dIdx_mRwVzczv-Me-aDkt8iU",
+  "tracks": [
+    { "name": "Love is in the Air, Pt. 1", "file": "mp3/Love is in the Air, Pt. 1.mp3" },
+    { "name": "Purpose Is Glorious (Emotional Score)", "file": "mp3/Purpose Is Glorious (Emotional Score).mp3" },
+    { "name": "Runaway", "file": "mp3/Runaway.mp3" },
+    { "name": "Softcore", "file": "mp3/Softcore.mp3" }
+  ]
+}
+</script>
+<!-- ═══ LECTOR DE LIBROS (modal) ═══ -->
+<div id="book-modal" class="book-modal">
+  <div class="book-window">
+    <div class="book-titlebar">
+      <span>☰ LECTOR_DE_LIBROS v1.0</span>
+      <span class="book-close-x" id="book-close" title="cerrar">✕</span>
+    </div>
+    <div class="book-stage">
+      <div id="book-3d" class="book-3d"></div>
+      <p id="book-hint" class="book-hint">▸ clic en el libro = pasar página</p>
+      <div class="book-ctrls">
+        <button class="btn small" id="book-prev">← anterior</button>
+        <button class="btn small" id="book-next">siguiente →</button>
+      </div>
+    </div>
+  </div>
+</div>
+
+<script src="js/posts.js"></script>
+<script src="js/main.js"></script>
+<script src="js/admin.js"></script>
+<script src="js/player.js"></script>
+<script src="js/books.js"></script>
+</body>
+</html>
